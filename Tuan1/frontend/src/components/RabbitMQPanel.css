@@ -1,0 +1,193 @@
+.rabbitmq-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.section {
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+}
+
+.section h2 {
+  color: #667eea;
+  margin-bottom: 10px;
+}
+
+.section h3 {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.description {
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: 'Courier New', monospace;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: #667eea;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #5568d3;
+  transform: translateY(-2px);
+}
+
+.btn-success {
+  background: #28a745;
+  color: white;
+}
+
+.btn-success:hover {
+  background: #218838;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: #6c757d;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: #5a6268;
+}
+
+.status-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.status-display {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.status-item {
+  padding: 10px;
+  background: white;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.logs-container {
+  max-height: 300px;
+  overflow-y: auto;
+  background: #1e1e1e;
+  padding: 15px;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+}
+
+.log-item {
+  padding: 5px 0;
+  display: flex;
+  gap: 10px;
+}
+
+.log-time {
+  color: #888;
+}
+
+.log-info .log-message {
+  color: #d4d4d4;
+}
+
+.log-success .log-message {
+  color: #4ec9b0;
+}
+
+.log-error .log-message {
+  color: #f48771;
+}
+
+.no-logs {
+  color: #888;
+  text-align: center;
+  padding: 20px;
+}
+
+.api-info {
+  background: #e7f3ff;
+  border-left-color: #2196f3;
+}
+
+.endpoint-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.endpoint {
+  padding: 15px;
+  background: white;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.endpoint strong {
+  color: #2196f3;
+  margin-right: 10px;
+}
+
+.endpoint code {
+  background: #f5f5f5;
+  padding: 2px 6px;
+  border-radius: 3px;
+  color: #e91e63;
+}
+
+.endpoint p {
+  margin: 10px 0;
+  color: #666;
+}
+
+.endpoint pre {
+  background: #1e1e1e;
+  color: #d4d4d4;
+  padding: 10px;
+  border-radius: 4px;
+  overflow-x: auto;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}

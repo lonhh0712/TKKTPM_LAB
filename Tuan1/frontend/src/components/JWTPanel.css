@@ -1,0 +1,180 @@
+.jwt-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.section {
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+}
+
+.section h2 {
+  color: #667eea;
+  margin-bottom: 10px;
+}
+
+.section h3 {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.description {
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.token-display {
+  font-family: 'Courier New', monospace;
+  font-size: 0.85rem;
+  background: #1e1e1e;
+  color: #d4d4d4;
+  border: 1px solid #333;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: #667eea;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #5568d3;
+  transform: translateY(-2px);
+}
+
+.btn-success {
+  background: #28a745;
+  color: white;
+}
+
+.btn-success:hover {
+  background: #218838;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: #6c757d;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: #5a6268;
+}
+
+.btn-info {
+  background: #17a2b8;
+  color: white;
+}
+
+.btn-info:hover {
+  background: #138496;
+  transform: translateY(-2px);
+}
+
+.result-section {
+  border-left-width: 4px;
+}
+
+.result-section.success {
+  background: #d4edda;
+  border-left-color: #28a745;
+}
+
+.result-section.error {
+  background: #f8d7da;
+  border-left-color: #dc3545;
+}
+
+.result-data {
+  background: #1e1e1e;
+  color: #d4d4d4;
+  padding: 15px;
+  border-radius: 4px;
+  overflow-x: auto;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+.api-info {
+  background: #e7f3ff;
+  border-left-color: #2196f3;
+}
+
+.endpoint-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.endpoint {
+  padding: 15px;
+  background: white;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.endpoint strong {
+  color: #2196f3;
+  margin-right: 10px;
+}
+
+.endpoint code {
+  background: #f5f5f5;
+  padding: 2px 6px;
+  border-radius: 3px;
+  color: #e91e63;
+}
+
+.endpoint p {
+  margin: 10px 0;
+  color: #666;
+}
+
+.endpoint pre {
+  background: #1e1e1e;
+  color: #d4d4d4;
+  padding: 10px;
+  border-radius: 4px;
+  overflow-x: auto;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}

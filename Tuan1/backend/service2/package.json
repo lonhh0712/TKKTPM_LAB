@@ -1,0 +1,17 @@
+{
+  "name": "service2",
+  "version": "1.0.0",
+  "description": "Service 2 - Receive and process events from RabbitMQ",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "amqplib": "^0.10.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1"
+  }
+}

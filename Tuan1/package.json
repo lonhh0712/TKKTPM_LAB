@@ -1,0 +1,16 @@
+{
+  "name": "lap-tuan-project",
+  "version": "1.0.0",
+  "description": "React project với RabbitMQ và JWT implementation",
+  "main": "index.js",
+  "scripts": {
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:service1": "cd backend/service1 && npm run dev",
+    "dev:service2": "cd backend/service2 && npm run dev",
+    "dev:jwt": "cd backend/jwt-service && npm run dev",
+    "install:all": "npm install && cd frontend && npm install && cd ../backend/service1 && npm install && cd ../service2 && npm install && cd ../jwt-service && npm install"
+  },
+  "keywords": ["react", "rabbitmq", "jwt", "oauth"],
+  "author": "",
+  "license": "ISC"
+}
