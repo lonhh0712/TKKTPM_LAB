@@ -1,0 +1,24 @@
+services:
+  traefik:
+    image: traefik:v3.1
+    command:
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+      - "--entrypoints.web.address=:80"
+    ports:
+      - "80:80"
+      - "8080:8080"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+
+  flask:
+    image: nginx:alpine
+    labels:
+      - "traefik.http.routers.flask.rule=Host(`flask.localhost`)"
+      - "traefik.http.services.flask.loadbalancer.server.port=80"
+
+  wordpress:
+    image: wordpress:latest
+    labels:
+      - "traefik.http.routers.wp.rule=Host(`wp.localhost`)"
+      - "traefik.http.services.wp.loadbalancer.server.port=80"

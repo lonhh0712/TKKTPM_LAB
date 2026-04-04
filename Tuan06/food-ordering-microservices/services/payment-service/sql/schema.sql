@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS payments (
+  id BIGSERIAL PRIMARY KEY,
+  order_id BIGINT NOT NULL,
+  user_id BIGINT NOT NULL,
+  amount NUMERIC(12,2) NOT NULL,
+  status VARCHAR(20) NOT NULL DEFAULT 'PENDING',
+  transaction_ref VARCHAR(150),
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);

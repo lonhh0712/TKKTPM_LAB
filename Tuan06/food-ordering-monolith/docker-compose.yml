@@ -1,0 +1,33 @@
+version: "3.9"
+
+services:
+  monolith-db:
+    image: postgres:16-alpine
+    container_name: food-monolith-db
+    environment:
+      POSTGRES_DB: food_ordering
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5437:5432"
+    volumes:
+      - ./sql/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql
+
+  monolith-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: food-monolith-app
+    environment:
+      PORT: 4000
+      DB_HOST: monolith-db
+      DB_PORT: 5432
+      DB_NAME: food_ordering
+      DB_USER: postgres
+      DB_PASSWORD: postgres
+      JWT_SECRET: dev_secret_for_local
+      JWT_EXPIRES_IN: 1d
+    ports:
+      - "4000:4000"
+    depends_on:
+      - monolith-db

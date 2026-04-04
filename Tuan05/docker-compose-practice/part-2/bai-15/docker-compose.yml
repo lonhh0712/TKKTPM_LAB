@@ -1,0 +1,7 @@
+services:
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    mem_limit: 256m
+    cpus: "0.50"

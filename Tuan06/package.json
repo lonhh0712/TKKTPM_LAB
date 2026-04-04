@@ -1,0 +1,14 @@
+{
+  "name": "node-docker-simple",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Simple Node.js app for Docker multi-stage build",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "node -e \"console.log('No build step required')\""
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

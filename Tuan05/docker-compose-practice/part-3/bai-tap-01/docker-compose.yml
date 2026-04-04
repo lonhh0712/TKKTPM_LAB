@@ -1,0 +1,32 @@
+services:
+  mysql:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wpuser
+      MYSQL_PASSWORD: wppass
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - wp_net
+
+  wordpress:
+    image: wordpress:latest
+    depends_on:
+      - mysql
+    environment:
+      WORDPRESS_DB_HOST: mysql:3306
+      WORDPRESS_DB_USER: wpuser
+      WORDPRESS_DB_PASSWORD: wppass
+      WORDPRESS_DB_NAME: wordpress
+    ports:
+      - "80:80"
+    networks:
+      - wp_net
+
+volumes:
+  mysql_data:
+
+networks:
+  wp_net:

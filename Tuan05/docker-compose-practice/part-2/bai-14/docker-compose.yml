@@ -1,0 +1,16 @@
+services:
+  app1:
+    image: alpine
+    command: ["sh", "-c", "sleep 3600"]
+    networks:
+      - private_net
+
+  app2:
+    image: alpine
+    command: ["sh", "-c", "sleep 3600"]
+    networks:
+      - private_net
+
+networks:
+  private_net:
+    driver: bridge

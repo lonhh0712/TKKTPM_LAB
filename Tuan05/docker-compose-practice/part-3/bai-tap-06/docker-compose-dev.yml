@@ -1,0 +1,18 @@
+services:
+  app:
+    build:
+      context: .
+      target: dev
+    volumes:
+      - ./:/app
+    ports:
+      - "8000:8000"
+    command: python app.py
+
+  tests:
+    build:
+      context: .
+      target: dev
+    volumes:
+      - ./:/app
+    entrypoint: ["sh", "-c", "while true; do pytest -q || true; sleep 3; done"]
